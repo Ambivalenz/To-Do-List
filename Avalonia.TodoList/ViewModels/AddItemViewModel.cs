@@ -6,7 +6,7 @@ namespace Avalonia.TodoList.ViewModels;
 
 public class AddItemViewModel : ViewModelBase
 {
-    private string description;
+    private string? _description;
 
     public AddItemViewModel()
     {
@@ -21,10 +21,10 @@ public class AddItemViewModel : ViewModelBase
         
     }
 
-    public string Description
+    private string? Description
     {
-        get => description;
-        set => this.RaiseAndSetIfChanged(ref description, value);
+        get => _description;
+        set => this.RaiseAndSetIfChanged(ref _description, value);
     }
     
     public ReactiveCommand<Unit, TodoItem> Ok { get; }

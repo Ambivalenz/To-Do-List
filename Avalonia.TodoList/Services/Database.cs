@@ -5,10 +5,10 @@ namespace Avalonia.TodoList.Services;
 
 public class Database
 {
-    public IEnumerable<TodoItem> GetItems() => new[]
+    public static IEnumerable<TodoItem> GetItems() => new[]
     {
         new TodoItem { Description = "Walk the cat" },
         new TodoItem { Description = "Buy some milk" },
-        new TodoItem { Description = "Learn Avalonia", IsChecked = true}
+        new TodoItem { Description = "Learn Avalonia", IsChecked = true }
     };
 }

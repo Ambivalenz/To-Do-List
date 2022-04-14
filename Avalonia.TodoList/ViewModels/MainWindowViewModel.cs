@@ -13,7 +13,7 @@ namespace Avalonia.TodoList.ViewModels
         private ViewModelBase content;
         public MainWindowViewModel(Database db)
         {
-            Content = List = new TodoListViewModel(db.GetItems());
+            Content = List = new TodoListViewModel(Database.GetItems());
         }
 
         public ViewModelBase Content
